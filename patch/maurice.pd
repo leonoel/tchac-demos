@@ -1,0 +1,36 @@
+#N canvas 2267 553 832 198 10;
+#X obj 318 161 dac~;
+#X obj 26 10 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 26 90 readsf~ 2;
+#X obj 585 10 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 585 86 readsf~ 2;
+#X obj 310 87 readsf~ 2;
+#X obj 310 10 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 263 10 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 263 47 stop;
+#X msg -15 47 stop;
+#X msg 542 47 stop;
+#X msg 26 47 open ../audio/jazz.wav \, start;
+#X msg 310 47 open ../audio/wash.wav \, start;
+#X msg 585 47 open ../audio/argh.wav \, start;
+#X connect 1 0 11 0;
+#X connect 2 0 0 0;
+#X connect 2 1 0 1;
+#X connect 2 2 11 0;
+#X connect 3 0 13 0;
+#X connect 4 0 0 0;
+#X connect 4 1 0 1;
+#X connect 5 0 0 0;
+#X connect 5 1 0 1;
+#X connect 6 0 12 0;
+#X connect 7 0 8 0;
+#X connect 8 0 5 0;
+#X connect 9 0 2 0;
+#X connect 10 0 4 0;
+#X connect 11 0 2 0;
+#X connect 12 0 5 0;
+#X connect 13 0 4 0;
