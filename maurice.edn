@@ -2,11 +2,10 @@
   :entities {
     :character-a {
       :type :character
-      :character \A
+      :character \a
       :position [0 0]
       :opacity 0
     }
-
   }
 
   :forces {

@@ -1,0 +1,28 @@
+{
+  :glyphs {
+    \a {
+      :outline vector.glyph.a
+      :skeleton {
+        :joints [
+          {:x -1
+           :y 0
+           :strength 1}
+          {:x 1
+           :y -1
+           :strength 1}
+          {:x 1
+           :y 1
+           :strength 1}
+        ]
+        :bones #{
+          {:joints #{0 1}
+           :strength 1}
+          {:joints #{1 2}
+           :strength 1}
+          {:joints #{0 2}
+           :strength 1}
+        }
+      }
+    }
+  }
+}
