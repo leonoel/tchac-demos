@@ -1,0 +1,51 @@
+{
+  :entities {
+    :character-a {
+      :type :character
+      :character \A
+      :position [0 0]
+      :opacity 0
+    }
+
+  }
+
+  :forces {
+    :disruption {
+      :type :disruptor
+      :active false
+    }
+  }
+
+  :states {
+    :init {
+        :schedule {
+          :after-millis 2000
+          :state :character-a-appears
+          :entities {
+            :character-a {
+              :opacity 1
+            }
+          }
+        }
+    }
+
+    :character-a-appears {
+      :await {
+          :entity :character-a
+          :action :click
+          :state :climax
+          :forces {
+            :disruption {
+              :active true
+            }
+          }
+      }
+    }
+
+    :climax {
+
+    }
+
+  }
+
+}
